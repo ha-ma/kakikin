@@ -1,0 +1,346 @@
+
+/* ==================================================================== */
+/* スライドショー */
+/* -------------------------------------------------------------------- */
+
+
+.bx-wrapper {
+  box-shadow: none;
+  border: 0px;
+}
+
+
+
+
+section#slider1 {
+  width: 100%;
+  height: 240px;
+  position: relative;
+  z-index: 0;
+  @media (min-width: 600px) {
+    height: 360px;
+  }
+  @media (min-width: 768px) {
+  }
+  @media (min-width: 1024px) {
+  }
+  @media (min-width: 1240px) {
+
+  }
+  margin: 0 auto 50px;
+  .section-container {
+    width: 100%;
+    position: relative;
+    &::after {
+      @include gradcover;
+
+    }
+
+    .hero-catch {
+      position: absolute;
+      top: 20px; 
+      width: 70%;
+      margin: 0 auto;
+      right: 0;
+      left: 0;
+      text-align: center;
+      z-index: 2;
+
+      @media (min-width: 425px) {
+        margin-top: 20px;
+      }
+      @media (min-width: 768px) {
+        text-align: right;
+      }
+      @media (min-width: 1024px) {
+        margin-top: 50px;
+        width: 85%;
+      }
+
+      @media (min-width: 1440px) {
+        width: 1200px;
+      }
+
+
+
+      #hero-heading {
+        top: 25%;
+        right: 0;
+        left: 0;
+        text-align: center;
+        z-index: 10;
+        line-height: 1.6;
+        margin-bottom: 8px;
+        font-size: 28px;
+        color: $white;
+        @media (min-width: 768px) {
+          text-align: right;
+        }
+
+
+        span {
+          color: $white;
+          display: inline-block;
+          padding: 2px 16px;
+          background: rgba(71,150,100,.7);
+          border-radius: 4px;
+          font-size: 16px;
+          margin: 0 0 4px 0;
+          @media (min-width: 425px) {
+            font-size: 24px;
+          }
+          @media (min-width: 1024px) {
+            font-size: 40px;
+          }
+        }
+
+      }
+      #hero-subheading {
+        position: relative;
+        color: $white;
+        display: none;
+        padding: 2px 0 2px 16px;
+        border-radius: 4px;
+        font-size: 16px;
+        margin: 0 0 4px 0;
+        @media (min-width: 768px) {
+          display: block;
+        }
+        span {
+          display: inline-block;
+          padding: 2px 16px;
+          background: rgba(239,239,231,.75);
+          border-radius: 4px;
+          font-size: 16px;
+          margin: 0 0 4px 0;
+          @media (min-width: 1024px) {
+            font-size: 20px;
+          }
+        }
+
+      }
+      #hero-btn {
+        display: inline-block;
+        padding: 4px 8px;
+        color: $white;
+        border-color: $white;
+        font-size: 18px;
+
+        &:hover {
+          border-color: $primary;
+        }
+        @media (min-width: 768px) {
+          font-size: 24px;
+          margin-top: 30px;
+          display: inline-block;
+        }
+        img {
+          display: inline-block;
+          width: 10px;
+        }
+
+      }
+
+    }
+
+    .bx-wrapper {
+      position: relative;
+      z-index: 1;
+      .bx-viewport {
+        margin: 66px auto 0;
+        max-width: 1400px;
+
+        @media (min-width: 768px) {
+          margin: 75px auto 0;
+        }
+        @media (min-width: 1400px) {
+          margin: 100px auto 0;
+        }
+
+      }
+
+    }
+  }
+}
+
+
+section#slider1 {
+
+  .section-container.container {
+
+    .bx-wrapper {
+      .bx-controls {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 20px;
+        .bx-pager {
+          bottom: 20px;
+          @media (min-width: 425px) {
+            bottom: 30px;
+          }
+          @media (min-width: 768px) {
+            bottom: 50px;
+            text-align: left;
+            width: 70%;
+            margin: 0 auto;
+            right: 0;
+            left: 0;
+          }
+          @media (min-width: 1200px) {
+            max-width: 1400px;
+          }
+          @media (min-width: 1440px) {
+            left: 100px;
+          }
+          &.bx-default-pager {
+            .bx-pager-item {
+              a {
+                display: inline-block;
+                background: rgba(255,255,255,.6);
+                @media (min-width: 768px) {
+                  width: 30px;
+                  height: 30px;
+                  -moz-border-radius: 15px;
+                  -webkit-border-radius: 15px;
+                  border-radius: 15px;
+                }
+                &.active {
+                  background: rgba(71,150,100,.6);
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+
+
+    ul.bxslider {
+      li.bxslider-slide {
+        position: relative;
+        img {
+          width: 100%;
+        }
+        p {
+          position: absolute;
+          width: 100%;
+          bottom: 5px;
+          left: 20px;
+          color: $white;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+
+section#slider3 {
+  background: $white;
+  color: $black;
+  margin-bottom: 0;
+  padding: 80px 0 40px;
+  @media (min-width: 768px) {
+    margin-bottom: 200px;
+  }
+  .section-container.container {
+    width: 90%;
+    max-width: 1024px;
+    position: relative;
+    margin: 0 auto;
+
+    .heading-box.productslider-heading {
+      h2 {
+        font-size: 28px;
+        @media (min-width: 1024px) {
+          font-size: 70px;
+        }
+      }
+    }
+
+    .bx-wrapper {
+      background: transparent;
+      margin-top: 80px;
+      .bx-controls-direction {
+        top: 25%;
+        a {
+          background:rgba(71,150,100,.8);
+          border-radius: 8px;
+        }
+
+      }
+    }
+
+    ul.bxslider {
+      li.bxslider-slide {
+        position: relative;
+        img.product-img {
+          display: block;
+          margin: 0 auto;
+          width: 240px;
+        }
+        h2.product-heading-en {
+          font-size: 26px;
+          text-align: center;
+          margin-top: 0;
+          color: $primary;
+          width: 80%;
+          margin: 0 auto;
+          @media (min-width: 1024px) {
+            font-size: 40px;
+          }
+        }
+        p.product-heading-jp {
+          color: $secondary;
+          width: 80%;
+          margin: 0 auto;
+        }
+        p.product-heading-jp,
+        p.product-desc {
+          font-size: 16px;
+          text-align: center;
+          margin: 0 auto;
+          width: 100%;
+
+        }
+        .product-shop {
+          text-align: center;
+          margin-top: 20px;
+          ul {
+            li {
+              display: inline-block;
+              a {
+                color: $primary;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+    .btn-box {
+      a {
+        display: block;
+        width: 280px;
+        margin: 0 auto 20px;
+        @media (min-width: 600px) {
+          display: inline-block;
+        }
+        &.product-link-shop,
+        &.product-link-product {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+
+}

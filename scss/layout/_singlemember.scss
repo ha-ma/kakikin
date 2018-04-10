@@ -1,0 +1,431 @@
+
+main#single-member {
+
+  margin-top: 66px;
+
+  @media (min-width: 768px) {
+    padding-top: 50px;
+  }
+
+  article.single-member-article {
+    .single-member-article-container {
+
+      .member-eyecatch {
+        width: 100%;
+        max-width: 1200px;
+        height: 280px;
+        margin: 0 auto;
+
+        @media (min-width: 425px) {
+          height: 340px;
+        }
+        @media (min-width: 600px) {
+          height: 400px;
+        }
+        @media (min-width: 1024px) {
+          height: 500px;
+        }
+      }
+
+      .member-header {
+        width: 90%;
+        max-width: 1200px;
+        margin: 20px auto;
+
+        .member-header-category {
+          ul.member-header-item-list {
+            li.member-header-item {
+              border: 1px solid $primary;
+              border-radius: 4px;
+              color: $primary;
+              display: inline-block;
+              margin-right: 18px;
+              padding: 4px 8px;
+              font-size: 18px;
+            }
+          }
+        }
+
+        .member-header-title {
+          h2 {
+            color: $black;
+          }
+        }
+
+        .member-header-sns {
+          p {
+            a {
+              color: $primary;
+              font-size: 18px;
+              font-weight: bold;
+              img {
+                display: inline-block;
+                width: 30px;
+                margin-right: 10px;
+                vertical-align: middle;
+              }
+            }
+          }
+        }
+      }
+
+      .member-content {
+        margin-top: 30px;
+
+        .member-quote {
+          position: relative;
+          width: 90%;
+          max-width: 1000px;
+          border: 1px solid $secondary;
+          border-radius: 8px;
+          padding: 30px;
+          margin: 0 auto 40px;
+          text-align: center;
+          z-index: 2;
+
+          &::before {
+            position: absolute;
+            content: url(../images/quote-icon-1.png);
+            width: 30px;
+            height: 30px;
+            top: 10px;
+            left: 10px;
+            z-index: 0;
+          }
+
+          &::after {
+            display: none;
+            position: absolute;
+            content: url(../images/quote-icon-2.png);
+            width: 30px;
+            height: 30px;
+            top: 10px;
+            right: 40px;
+            z-index: 0;
+            @media (min-width: 600px) {
+              display: inline-block;
+            }
+
+          }
+
+          p.quote-body {
+            position: relative;
+            width: 80%;
+            z-index: 2;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 18px;
+            font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+          }
+        }
+
+        .member-info {
+          background: $gray;
+          padding: 40px 0;
+          margin: 30px auto;
+          .member-info-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-top: 1px solid $primary;
+            border-bottom: 1px solid $primary;
+            padding: 20px 0;
+
+            .member-info-contents {
+              width: 100%;
+              @media (min-width: 768px) {
+                width: 80%;
+                @include flex;
+              }
+
+              .member-info-left {
+                width: 100%;
+                @media (min-width: 768px) {
+                  width: 20%;
+                }
+                .member-avatar {
+                  width: 80px; 
+                  height: 80px;
+                  border-radius: 40px;
+                  margin: 0 auto;
+                  @media (min-width: 768px) {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 60px;
+                  }
+
+
+                }
+
+              }
+              .member-info-right {
+                width: 100%;
+                text-align: center;
+                @media (min-width: 768px) {
+                  width: 75%;
+                  text-align: left;
+                }
+                .member-short-bg {
+                  p {
+                    font-size: 14px;
+                  }
+                }
+                .member-name {
+                  h3 {
+                    font-size: 28px;
+                    margin: 0;
+                  }
+                }
+                .member-basic-info {
+                  h3 {
+                    font-size: 14px;
+                  }
+                }
+
+              }
+
+            }
+          }
+        }
+
+        .member-image-lg-1,
+        .member-image-lg-2 {
+          width: 100%;
+          max-width: 1200px;
+          height: 280px;
+          margin: 0 auto;
+
+          @media (min-width: 425px) {
+            height: 340px;
+          }
+          @media (min-width: 600px) {
+            height: 400px;
+          }
+          @media (min-width: 1024px) {
+            height: 500px;
+          }
+        }
+
+        .member-image-sm-1,
+        .member-image-sm-2,
+        .member-image-sm-3 {
+          width: 90%;
+          max-width: 1000px;
+          height: 280px;
+          margin: 20px auto 40px;
+
+          @media (min-width: 425px) {
+            height: 340px;
+          }
+          @media (min-width: 600px) {
+            height: 400px;
+          }
+          @media (min-width: 1024px) {
+            height: 500px;
+          }
+        }
+
+        .member-question-1,
+        .member-question-2,
+        .member-question-3,
+        .member-answer-1,
+        .member-answer-2,
+        .member-answer-3 {
+          width: 90%;
+          margin: 30px auto;
+          max-width: 1000px;
+          p {
+            font-size: 16px;
+            color: $black;
+          }
+          h2 {
+            font-size: 24px;
+            color: $black;
+            position: relative;
+            padding-left: 100px;
+            &::before {
+              content: '';
+              background: $black;
+              height: 2px;
+              width: 80px;
+              position: absolute;
+              top: 20px;
+              left: 0px;
+
+            }
+          }
+        }
+
+        .member-others {
+          width: 90%;
+          margin: 30px auto;
+          max-width: 1000px;
+        }
+      }
+
+
+    }
+  }
+
+
+  section#member-transition {
+    background-color: $gray;
+    padding: 20px 0;
+    margin-top: 50px;
+    .member-transition-container {
+      width: 90%;
+      margin: 0 auto;
+      border-top: 1px solid $primary;
+      border-bottom: 1px solid $primary;
+      padding: 20px 0;
+      max-width: 1000px;
+
+      .member-transition-box {
+
+        .nav-box {
+          float: left;
+          width: 100%;
+          @media (min-width: 600px) {
+            width: 50%;
+          }
+          &.nav-prev {
+            border-bottom: 1px solid $primary;
+            padding-bottom: 20px;
+            @media (min-width: 600px) {
+              border-bottom: none;
+              border-right: 1px solid $primary;
+              padding-bottom: 0;
+            }
+
+            .prev-post-avatar {
+              float: left;
+              width: 80px; 
+              height: 80px;
+              border-radius: 40px;
+              margin-left: 20px;
+              @media (min-width: 1024px) {
+                margin-top: 25px;
+              }
+            }
+            .prev-post-info {
+              float: left;
+              margin-left: 20px;
+              padding-top: 20px;
+              @media (min-width: 1024px) {
+                width: 60%;
+                padding-top: 0;
+              }
+              img {
+                width: 20px;
+                display: inline-block;
+                vertical-align: middle;
+                @media (min-width: 1024px) {
+                  display: none;
+                }
+              }
+              p.prev-post-link {
+                display: none;
+                @media (min-width: 1024px) {
+                  display: block;
+                }
+                @media (min-width: 1024px) {
+                  width: 80%;
+                }
+                a {
+                  color: $black;
+                }
+              }
+              span.prev-post-link-span {
+                font-size: 20px;
+                display: inline-block;
+                margin-left: 20px;
+                @media (min-width: 600px) {
+                  margin-left: 0px;
+                }
+                a {
+                  text-decoration: underline;
+                  color: $black;
+                }
+              }
+            }
+          }
+          &.nav-next {
+            padding-top: 20px;
+            @media (min-width: 600px) {
+              padding-top: 0;
+            }
+            .next-post-avatar {
+              float: left;
+              width: 80px;
+              height: 80px;
+              border-radius: 40px;
+              margin-left: 20px;
+              @media (min-width: 600px) {
+                float: right;
+                margin-right: 20px;
+              }
+              @media (min-width: 1024px) {
+                margin-top: 25px;
+              }
+            }
+            .next-post-info {
+              float: left;
+              margin-left: 20px;
+              padding-top: 20px;
+              @media (min-width: 600px) {
+                float: right;
+              }
+              @media (min-width: 1024px) {
+                width: 60%;
+                padding-top: 0;
+              }
+              img {
+                width: 20px;
+                display: inline-block;
+                vertical-align: middle;
+                @media (min-width: 600px) {
+                  float: right;
+                }
+                @media (min-width: 1024px) {
+                  display: none;
+                }
+              }
+              p.next-post-link {
+                display: none;
+                @media (min-width: 1024px) {
+                  display: block;
+                }
+                @media (min-width: 1024px) {
+                  width: 80%;
+                }
+                a {
+                  color: $black;
+                }
+              }
+              span.next-post-link-span {
+                font-size: 20px;
+                display: inline-block;
+                margin-left: 20px;
+                @media (min-width: 600px) {
+                  margin-right: 10px;
+                  margin-left: 0;
+                }
+                a {
+                  text-decoration: underline;
+                  color: $black;
+                }
+              }
+            }
+          }
+
+        }
+
+
+      }
+
+    }
+  }
+
+
+
+}

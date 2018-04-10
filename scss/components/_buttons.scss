@@ -1,0 +1,81 @@
+@import 'colors';
+@import '../base/mixin';
+
+button {
+  background: none;
+  border: none;
+}
+
+.btn {
+  display: inline-block;
+  color: $white;
+  background: $primary;
+  padding: 6px 12px;
+  text-decoration: underline; 
+}
+
+.btn-box {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.btn-solid {
+  padding: 4px 8px;
+  background: $primary;
+  color: $white;
+  @media (min-width: 768px) {
+    font-size: 1.2em;
+    padding: 6px 12px;
+  }
+}
+
+.btn-outlined {
+  font-weight: 500;
+  padding: 4px 8px;
+  background: transparent;
+  color: $primary;
+  border: 1px solid $primary;
+  @include transition;
+  &:hover {
+    background: $primary;
+    color: $white;
+    border-color: $white;
+    text-decoration: none;
+    @include transition;
+  }
+  @media (min-width: 600px) {
+    font-size: 1.2em;
+    padding: 6px 12px;
+  }
+
+}
+
+.btn-belt {
+  position: relative;
+  z-index: 1000;
+  color: $primary;
+  &::after {
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    background: $secondary;
+    height: 30%;
+    bottom: 5px;
+    right: 0;
+    left: 0;
+    content: '';
+    @include transition;
+  }
+
+  &:hover {
+    text-decoration: none;
+    &::after {
+      @include transition;
+      width: 130%;
+      height: 10%;
+    }
+  }
+
+}
+
+

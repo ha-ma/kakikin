@@ -1,0 +1,65 @@
+
+/* ==================================================================== */
+/* CATEGORY HERO */
+/* -------------------------------------------------------------------- */
+
+section.categoryhero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+  background-image: url(../images/fronthero/fronthero.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  &.categoryhero_studyabroad {
+    background-image: url(../images/categoryhero/categoryhero-studyabroad.jpg);
+  }
+  &.categoryhero_workingholiday {
+    background-image: url(../images/categoryhero/categoryhero-workingholiday.jpg);
+  }
+  &.categoryhero_prep {
+    background-image: url(../images/categoryhero/categoryhero-prep.jpg);
+  }
+  &.categoryhero_event {
+    background-image: url(../images/categoryhero/categoryhero-event.png);
+  }
+  &.categoryhero_travel {
+    background-image: url(../images/categoryhero/categoryhero-travel.jpg);
+  }
+  @media (min-width: 600px) {
+    
+  }
+  @media (min-width: 768px) {
+  }
+  @media (min-width: 1024px) {
+  }
+  @media (min-width: 1240px) {
+
+  }
+  
+  .categoryhero-container {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    
+    .categoryhero-heading {
+      padding-top: 230px;
+      text-align: center;
+      img {
+        width: 80%;
+        max-width: 520px;
+      }
+
+    }
+
+    .categoryhero-content {
+      text-align: center;
+      width: 80%;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+  }
+}
+

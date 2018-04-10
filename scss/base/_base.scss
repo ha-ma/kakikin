@@ -1,0 +1,112 @@
+@import '../components/index';
+@import 'variables';
+@import 'mixin';
+
+html #wpadminbar {
+  @media screen and (max-width: 600px) {
+    position: fixed;
+  }
+}
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+  background: $white;
+  margin: 0;
+  padding: 0;
+  @include font-base;
+  color: $black;
+}
+
+#container-site {
+  position: relative;
+  
+  main {
+    @media ($tab2) {
+      float: right;
+      top: 0;
+      right: 0;
+      width: calc( 100% - 50px );
+    }
+  }
+}
+
+.contents-wrapper {
+  position: relative;
+  min-height: 100%;
+  height: auto !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+h1 > a, h2 >a, h3 > a, h4 > a, h5 > a, h6 > a {
+  font-weight: 700;
+
+}
+
+
+
+ul, li {
+  list-style: none;
+  padding: 0;
+}
+
+ul, li, p, a {
+  text-decoration: none;
+  word-wrap: break-word;
+}
+
+a {
+  @include transition;
+  &:hover {
+    @include transition;
+    text-decoration: underline;
+  }
+}
+
+
+a.thumbnail {
+  &:active,
+  &:focus,
+  &:hover {
+    border: none;
+  }
+}
+
+li a {
+  padding: 0;
+}
+
+
+/* ==================================================================== */
+/* テーマ独自スタイル */
+/* -------------------------------------------------------------------- */
+
+.ts {
+  -moz-text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+  -webkit-text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+  -ms-text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+}
+
+.en {
+
+}
+
+.heading-jp {
+  font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.bold-weight {
+  font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+  font-weight: 600;
+}

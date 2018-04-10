@@ -1,0 +1,197 @@
+@import '../base/variables';
+main.main.main-single {
+  .single-container {
+
+    section.single-header {
+      position: relative;
+      width: 100%;
+      height: 240px;
+      background-position: center;
+      background-size: cover;
+      @media ($tab2) {
+        height: 460px;
+      }
+
+      .single-header-container {
+        position: absolute;
+        background: rgba(255,255,255,.85);
+        width: 90%;
+        right: 0;
+        left: 0;
+        bottom: -30px;
+        margin: 0 auto;
+        @media ($tab2) {
+          right: 0;
+          left: auto;
+        }
+        .single-header-wrapper {
+          width: 95%;
+          max-width: 700px;
+          margin-top: 0;
+          margin-left: 3%;
+          padding: 10px 0;
+          .single-header-title {
+            font-size: 24px;
+            line-height: 1.2;
+          }
+          .single-header-category {
+            a {
+              display: inline-block;
+              color: $white;
+              background: $primary;
+              padding: 4px 8px;
+            }
+          }
+        }
+
+        
+
+
+
+        .single-header-category {
+
+        }
+        .single-header-title {
+
+        }
+      } 
+    }
+
+    section.single-content {
+      padding-top: 60px;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+
+      .single-content-container {
+        width: 90%;
+        max-width: 680px;
+        padding: 40px 5% 30px;
+        margin: 0 auto;
+        background-color: rgba(255,255,255,.95);
+
+        .single-content-thumbnail {
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+
+      }
+    }
+
+    section.single-pagenation {
+      padding: 20px 0;
+      background: $primary;
+
+      .single-pagenation-container {
+        width: 90%;
+        max-width: 680px;
+        margin: 0 auto;
+        color: $white;
+        @media ($tab2) {
+          @include flex;
+        }
+        p {
+          width: 100%;
+          @media ($tab2) {
+            width: 45%;
+          }
+          a {
+            color: $white;
+          }
+        }
+        
+
+      }
+    }
+  }
+}
+
+
+
+section.relatedposts {
+  background: $orangegray;
+  padding: 20px 0;
+  .relatedposts-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    .relatedposts-heading {
+      text-align: center;
+    }
+  }
+
+  ul.blog-contents {
+    width: 100%;
+    @include flex;
+    li.blog-content {
+      background: $white;
+      width: 100%;
+      @include flex;
+      margin-bottom: 30px;
+      @media (min-width: 768px) {
+        width: 48%;
+      }
+      @media (min-width: 1200px) {
+        width: 24%;
+      }
+      .blog-content-left {
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+      }
+      .blog-content-right {
+        width: 100%;
+        padding: 10px;
+        p {
+          margin: 0 auto;
+        }
+        h3 {
+          margin: 0 auto 10px;
+          line-height: 1.2;
+          a {
+            font-size: 21px;
+            color: $primary;
+          }
+        }
+        ul.post-categories {
+          margin-bottom: 10px;
+          li {
+            display: inline-block;
+            margin-top: 0;
+            margin-right: 10px;
+            margin-bottom: 0;
+            margin-left: 0;
+            a {
+              display: inline-block;
+              padding: 4px 12px;
+              color: $primary;
+              border: 2px solid $primary;
+              font-size: 14px;
+            }
+          }
+        }
+        a.blog-btn {
+          display: inline-block;
+          padding: 4px 12px;
+          background: $primary;
+          color: $white;
+          margin-top: 10px;
+          border: 2px solid $primary;
+          font-size: 14px;
+        }
+      }
+
+
+
+    }
+
+  }
+}

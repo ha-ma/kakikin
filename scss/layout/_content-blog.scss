@@ -1,0 +1,112 @@
+section.blog {
+  background: $orangegray;
+  padding: 30px 0;
+  .blog-container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+
+    .blog-heading {
+      margin-bottom: 50px;
+      h2 {
+        text-align: center;
+        img {
+          width: 80%;
+          max-width: 420px;
+        }
+      }
+      h3 {
+        text-align: center;
+        color: $primary;
+      }
+      p {
+        width: 80%;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center; 
+
+      }
+    }
+
+    ul.blog-contents {
+      width: 100%;
+      @include flex;
+      li.blog-content {
+        background: $white;
+        width: 100%;
+        @include flex;
+        margin-bottom: 30px;
+        @media (min-width: 768px) {
+          width: 48%;
+        }
+        @media (min-width: 1200px) {
+          width: 24%;
+        }
+        .blog-content-left {
+          width: 100%;
+          height: 200px;
+          background-size: cover;
+          background-position: center;
+        }
+        .blog-content-right {
+          width: 100%;
+          padding: 10px;
+          p {
+            margin: 0 auto;
+          }
+          h3 {
+            margin: 0 auto 10px;
+            line-height: 1.2;
+            a {
+              font-size: 21px;
+              color: $primary;
+            }
+          }
+          ul.post-categories {
+            margin-bottom: 10px;
+            li {
+              display: inline-block;
+              margin-top: 0;
+              margin-right: 10px;
+              margin-bottom: 10px;
+              margin-left: 0;
+              a {
+                display: inline-block;
+                padding: 4px 12px;
+                color: $primary;
+                border: 2px solid $primary;
+                font-size: 14px;
+              }
+            }
+          }
+          a.blog-btn {
+            display: inline-block;
+            padding: 4px 12px;
+            background: $primary;
+            color: $white;
+            margin-top: 10px;
+            border: 2px solid $primary;
+            font-size: 14px;
+          }
+        }
+
+
+
+      }
+
+    }
+
+    .btn-box {
+      a.blog-btn {
+        display: inline-block;
+        padding: 4px 12px;
+        background: $primary;
+        color: $white;
+        margin-top: 10px;
+        border: 2px solid $primary;
+        font-size: 14px;
+      }
+    }
+  }
+}
+

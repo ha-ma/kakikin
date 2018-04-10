@@ -1,0 +1,338 @@
+
+@import '../components/colors';
+
+@mixin beforebg($rgba: rgba(255,255,255,.4)) {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $rgba;
+  }
+}
+
+@mixin bgimgcover($url) {
+  background-image: url($url);
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin gradcover() {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  content: '';
+  background: #22b573; /* Old browsers */
+  background: -moz-linear-gradient(left, #22b573 1%, #7db9e8 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #22b573 1%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #22b573 1%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#22b573', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 */
+  opacity: .40;
+  z-index: 1;
+}
+
+
+@mixin fadeIn($time: 3s) {
+  animation: fadeIn $time ease 0s 1 normal;
+  -webkit-animation: fadeIn $time ease 0s 1 normal;
+  @keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+  }
+
+  @-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+  }
+}
+
+
+@mixin transition {
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+
+
+@mixin transition-hover($duration: .25s, $timing: ease, $opacity: 0.8) {
+  -webkit-transition: all $duration $timing;
+  -moz-transition: all $duration $timing;
+  -ms-transition: all $duration $timing;
+  -o-transition: all $duration $timing;
+  transition: all $duration $timing;
+  &:hover {
+    -webkit-transition: all $duration $timing;
+    -moz-transition: all $duration $timing;
+    -ms-transition: all $duration $timing;
+    -o-transition: all $duration $timing;
+    transition: all $duration $timing;
+    opacity: $opacity;
+  }
+}
+
+
+
+@mixin flex( $justify: space-between ) {
+  -js-display: flex; /*--- IE8, 9---*/
+  display: -webkit-box;/*--- Androidブラウザ用 ---*/
+  display:- ms-flexbox;/*--- IE10 ---*/
+  display: -webkit-flex;/*--- safari（PC）用 ---*/
+  display: flex;
+  -webkit-box-align: stretch;/*--- Androidブラウザ用 ---*/
+  -ms-flex-align: stretch;/*--- IE10 ---*/
+  -webkit-align-items: stretch;/*--- safari（PC）用 ---*/
+  align-items: stretch;
+
+  -webkit-flex-wrap: wrap;/*--- safari（PC）用 ---*/
+  flex-wrap: wrap;
+
+  -webkit-box-pack: $justify;/*--- Androidブラウザ用 ---*/
+  -ms-flex-pack: $justify;/*--- IE10 ---*/
+  -webkit-justify-content: $justify;/*--- safari（PC）用 ---*/
+  justify-content: $justify;
+  margin: 0 auto;
+}
+
+
+@mixin order( $order: 0 ) {
+  -webkit-order: $order;
+  order: $order;
+}
+
+
+
+@mixin flex_prefix_wrap {
+  -js-display: flex; /*--- IE8, 9---*/
+  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+  flex-wrap: wrap;
+}
+
+
+
+@mixin font-base ( $fs: 14px, $lh: 1.7, $fw: normal, $c: $black) {
+  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+  font-size: $fs;
+  line-height: $lh;
+  font-weight: $fw;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin heading-en () {
+  color: $primary;
+  font-weight: 500;
+  margin: 0 auto;
+  font-size: 30px;
+  @media(min-width: 420px) {
+    font-size: 34px;
+  }
+  @media(min-width: 600px) {
+    font-size: 38px;
+  }
+  @media(min-width: 768px) {
+    font-size: 40px;
+  }
+  @media(min-width: 1024px) {
+    font-size: 46px;
+  }
+  @media(min-width: 1280px) {
+    font-size: 54px;
+  }
+  @media(min-width: 1440px) {
+    font-size: 70px;
+  }
+}
+
+
+@mixin heading-jp-lg () {
+  color: $primary-light;
+  font-weight: 700;
+  margin: 0 auto;
+  font-size: 21px;
+  @media(min-width: 420px) {
+    font-size: 24px;
+  }
+  @media(min-width: 600px) {
+    font-size: 28px;
+  }
+  @media(min-width: 768px) {
+    font-size: 32px;
+  }
+  @media(min-width: 1024px) {
+    font-size: 38px;
+  }
+}
+
+
+
+
+@mixin heading-jp-sm () {
+  color: $primary-light;
+  font-weight: 300;
+  margin: 0 auto;
+  font-size: 12px;
+  @media(min-width: 420px) {
+    font-size: 14px;
+  }
+  @media(min-width: 600px) {
+    font-size: 18px;
+  }
+  @media(min-width: 768px) {
+    font-size: 20px;
+  }
+  @media(min-width: 1024px) {
+    font-size: 22px;
+  }
+}
+
+@mixin resp-width ( $width: 95% ) {
+  width: $width;
+  margin: 0 auto;
+}
+
+
+
+@mixin btn {
+  padding: .5em;
+  border-radius: .2em;
+  box-shadow: 0 .08em .08em rgba(0,0,0,.25);
+}
+
+
+@mixin gradient-bg ( $start: rgba(240,240,240,0.3), $end: rgba(24,24,24,0.9) ) {
+  background: $end;
+  background: -moz-linear-gradient(top, $start, $end); /* Firefox用 */  
+  background: -o-linear-gradient(top, $start, $end); /* Opera */
+  background: -webkit-gradient(linear,left top,left bottom,from($start),to($end)); /* Safari,Google Chrome用 */
+  background: linear-gradient(top,$start,$end);
+}
+
+
+@mixin allcenter( $w: 80%, $h: 200px ) {
+  margin: auto;
+  position: absolute;
+  width: $w;
+  height: $h;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ==============================
+// Addable class
+// ==============================
+
+
+.bshadow-card {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.btnshadow {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  *zoom: 1;
+}
+
+
+
+/* ==================================================================== */
+/* テーマ独自スタイル */
+/* -------------------------------------------------------------------- */
+
+
+.order-1 {
+  order: 1;
+  -webkit-order: 1;
+}
+.order-2 {
+  order: 2;
+  -webkit-order: 2;
+}
+.order-3 {
+  order: 3;
+  -webkit-order: 3;
+}
+
+.fbox-1-3 {
+  @include flex;
+  .fbox {
+    width: 100%;
+    @media (min-width: 768px) {
+      width: 31%;
+      margin: 0 1% 2%;
+    }
+  }
+}
+
+.fbox-2-3 {
+  @include flex;
+  .fbox {
+    width: 48%;
+    @media (min-width: 768px) {
+      width: 31%;
+      margin: 0 1% 2%;
+    }
+  }
+}
+
+.fbox-2-4 {
+  @include flex;
+  .fbox {
+    width: 48%;
+    @media (min-width: 768px) {
+      width: 23%;
+      margin: 0 1% 2%;
+    }
+  }
+}
+
+
+@mixin after{
+  content:'';
+  position:absolute;
+  display:block;
+  left:0;
+  right:0;
+  bottom:0;
+  top:0;
+}
+

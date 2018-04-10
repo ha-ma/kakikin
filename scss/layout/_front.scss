@@ -1,0 +1,299 @@
+section.newsfeed {
+  .newsfeed-container {
+    .newsfeed-heading {
+      h2 {
+        text-align: center;
+        @include heading-en;
+      }
+      h3 {
+        text-align: center;
+        @include heading-jp-sm;
+      }
+    }
+    .newsfeed-content {
+
+    }
+
+
+  }
+}
+
+section.frontabout {
+  @include bgimgcover('../images/hero-about.jpg');
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  height: 200px;
+  @media (min-width: 600px) {
+    height: 300px;
+  }
+  @media (min-width: 600px) {
+    height: 400px;
+  }
+  &::after {
+    @include gradcover;
+  }
+  
+  .frontabout-container {
+    position: absolute;
+    width: 90%;
+    max-width: 1200px;
+    top: 20px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: 2; 
+    text-align: center;
+    color: $white;
+    @media (min-width: 600px) {
+      top: 100px;
+    }
+    h2.frontabout-heading {
+      @include heading-jp-lg;
+      color: $white;
+    }
+    p.frontabout-desc {
+      @include heading-jp-sm;
+      color: $white;
+      margin-bottom: 20px;
+    }
+    a.frontabout-btn {
+      color: $white;
+      border-color: $white;
+    }
+  }
+}
+
+section.frontcontents {
+  width: 100%;
+  margin: 50px auto 50px;
+  .frontcontents-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    .frontcontents-heading {
+      margin-bottom: 50px;
+      h2 {
+        text-align: center;
+        @include heading-en;
+      }
+      h3 {
+        text-align: center;
+        @include heading-jp-sm;
+      }
+    }
+    .frontcontents-contents {
+      @media (min-width: 768px) {
+        @include flex;
+      }
+
+      .frontcontents-contents-left {
+        width: 100%;
+        @media (min-width: 768px) {
+          width: 48%;
+        }
+      }
+      .frontcontents-contents-right {
+        width: 100%;
+        @media (min-width: 768px) {
+          width: 48%;
+        }
+      }
+
+      a.frontcontents-contentbox {
+        position: relative;
+        display: block;
+        z-index: 0;
+        color: $white;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 30px;
+        padding-top: 60px;
+        height: 240px;
+        @media (min-width: 768px) {
+          height: 300px;
+        }
+        &::before {
+          width: 100%;
+          position: absolute;
+          content: '';
+          background: rgba(0,0,0,.45);
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: 0 auto;
+          z-index: 1;
+        }
+        &::after {
+          position: absolute;
+          content: '';
+          background-image: url(../images/icons/triangle.png);
+          width: 37px;
+          height: 38px;
+          top: 0;
+          left: 0;
+          z-index: 3;
+        }
+        &.aboutus {
+          @include bgimgcover('../images/frontcontents-aboutus.jpg');
+          @media (min-width: 768px) {
+            padding-top: 50px;
+          }
+        }
+        &.benefits {
+          @include bgimgcover('../images/frontcontents-benefits.jpg');
+          @media (min-width: 768px) {
+            margin-bottom: 20px;
+            height: 140px;
+            padding-top: 20px;
+          }
+        }
+        &.heart {
+          @include bgimgcover('../images/frontcontents-heart.jpg');
+          @media (min-width: 768px) {
+            height: 140px;
+            padding-top: 20px;
+          }
+        }
+
+        h2 {
+          @include heading-jp-lg;
+          color: $white;
+          position: relative;
+          z-index: 3;
+        }
+        h3 {
+          @include heading-jp-sm;
+          color: $white;
+          position: relative;
+          z-index: 3;
+        }
+      }
+    }
+  }
+}
+
+
+section.frontmember {
+
+  background: $gray;
+  color: $black;
+  margin-bottom: 0;
+  padding: 80px 0 40px;
+  @media (min-width: 768px) {
+    margin-bottom: 60px;
+  }
+
+
+  .frontmember-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+
+    .bx-wrapper {
+      background: transparent;
+      margin-top: 80px;
+      .bx-controls-direction {
+        top: 40%;
+        a {
+          background:rgba(71,150,100,.8);
+          border-radius: 8px;
+        }
+
+      }
+    }
+
+    .frontmember-heading {
+      h2 {
+        text-align: center;
+        @include heading-en;
+      }
+      h3 {
+        text-align: center;
+        @include heading-jp-sm;
+      }
+    }
+
+
+    ul.bxslider {
+      li.bxslider-slide {
+        position: relative;
+        width: 30%;
+        a {
+          color: $black;
+          &:hover {
+            text-decoration: underline;
+          }
+
+          .member {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            @media (min-width: 1024px) {
+              width: 100%;
+              max-width: 1200px;
+            }
+
+            .member-left {
+
+              .member-avatar {
+                background-size: cover; 
+                background-position: center; 
+                width: 100%; 
+                height: 360px; 
+                margin: 0 auto;
+
+              }
+              .member-name {
+                h3 {
+                  font-size: 26px;
+                  text-align: center;
+                  margin-top: 0;
+                }
+                p {
+                  font-size: 16px;
+                  text-align: center;
+                  margin-bottom: 0;
+                }
+
+              }
+            }
+            .member-right {
+              @media (min-width: 1024px) {
+                width: 80%;
+                float: left;
+              }
+              .member-desc {
+                @media (min-width: 1024px) {
+                  width: 80%;
+                }
+
+                .member-intro {
+                  width: 85%;
+                  margin: 0 auto;
+                  p {
+                    text-align: center;
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .btn-box {
+      a.memberslider-btn {
+        font-size: 24px;
+      }
+    }
+
+
+
+  }
+}

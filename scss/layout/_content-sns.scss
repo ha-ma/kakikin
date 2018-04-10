@@ -1,0 +1,75 @@
+
+section.sns {
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 0;
+  background: $orangegray;
+  
+  .sns-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    @media ($tab2) {
+      @include flex;
+    }
+    .sns-box {
+      width: 100%;
+      margin-bottom: 20px;
+      .sns-box-heading {
+        h2 {
+          margin: 0 auto;
+        }
+        a {
+          color: $primary;
+        }
+      }
+      &.sns-instagram {
+        @media ($tab2) {
+          width: 55%;
+        }
+        
+        .sns-box-content {
+          ul {
+            @include flex;
+            li {
+              width: 49%;
+              margin-bottom: 2px;
+              @media ($tab2) {
+                width: 32%;
+              }
+              a {
+                &:hover {
+                  opacity: 0.7;
+                }
+                .instaphoto {
+                  width: 100%;
+                }
+              }
+              
+
+            }
+          }
+        }
+      }
+      &.sns-facebook {
+        @media ($tab2) {
+          width: 40%;
+        }
+        .sns-box-heading {
+        }
+        .sns-box-content {
+          width: 100%;
+          iframe {
+            width: 100% !important;
+            height: 400px;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+
+

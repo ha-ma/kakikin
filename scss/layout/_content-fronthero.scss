@@ -1,0 +1,83 @@
+
+/* ==================================================================== */
+/* HERO */
+/* -------------------------------------------------------------------- */
+
+section.fronthero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+  background-image: url(../images/fronthero/fronthero.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  z-index: 0;
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255,255,255,.3);
+    margin: 0 auto;
+    z-index: 1;
+  }
+  @media (min-width: 600px) {
+
+  }
+  @media (min-width: 768px) {
+  }
+  @media (min-width: 1024px) {
+  }
+  @media (min-width: 1240px) {
+
+  }
+  
+  .fronthero-container {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2; 
+    
+    .fronthero-heading {
+      padding-top: 120px;
+      text-align: center;
+      @media (min-width: 768px) {
+        padding-top: 240px;
+      }
+      @media (min-width: 1440px) {
+        padding-top: 320px;
+      }
+      img {
+        width: 80%;
+        max-width: 680px;
+        &.fronthero-heading-img-desktop {
+          display: none;
+          @media (min-width: 768px) {
+            display: inline-block;
+          }
+        }
+        &.fronthero-heading-img-mobile {
+          display: inline-block;
+          @media (min-width: 768px) {
+            display: none;
+          }
+        }
+      }
+
+    }
+
+    .fronthero-content {
+      text-align: center;
+      width: 80%;
+      max-width: 550px;
+      margin: 0 auto;
+      font-weight: bold;
+    }
+
+  }
+}
+

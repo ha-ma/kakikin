@@ -1,0 +1,112 @@
+
+/* ==================================================================== */
+/* Front Category */
+/* -------------------------------------------------------------------- */
+
+section.frontcategory {
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  .frontcategory-container {
+    @include flex;
+
+    .frontcategory-box {
+      position: relative;
+      display: block;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      height: 45vh;
+      z-index: 0;
+      @media ($tab1) {
+        height: 45vh;
+      }
+      @media ($pc1) {
+        height: 100vh;
+        width: 33.3333%;
+      }
+      &:hover {
+        z-index: 2;
+      }
+      &::before {
+        @include transition;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: 0 auto;
+        content: '';
+        background: rgba(0,0,0,0.45);
+        z-index: 1;
+      }
+      &.frontcategory-box_study {
+        background-image: url(../images/frontcategory/frontcategory-study.jpg);
+        &:hover {
+          background-image: none;
+          background-color: $primary;
+          &::before {
+            @include transition;
+            background: none;
+          }
+        }
+      }
+      &.frontcategory-box_workingholiday {
+        background-image: url(../images/frontcategory/frontcategory-workingholiday.jpg);
+        &:hover {
+          background-image: none;
+          background-color: $secondary;
+          &::before {
+            @include transition;
+            background: none;
+          }
+        }
+      }
+      &.frontcategory-box_travel {
+        background-image: url(../images/frontcategory/frontcategory-travel.jpg);
+        &:hover {
+          background-image: none;
+          background-color: $tri;
+          &::before {
+            @include transition;
+            background: none;
+          }
+        }
+      }
+
+      .frontcategory-box-container {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        z-index: 3;
+        color: $white;
+        @media ($pc1) {
+          top: 25%;
+        }
+        h2, h4, p {
+          margin: 0 auto;
+        }
+
+        img {
+          width: 80%;
+          max-width: 400px;
+          &.frontcategory-heading-img-travel {
+            max-width: 180px;
+            @media (min-width: 1600px) {
+              max-width: 340px;
+            }
+          }
+        }
+        
+      }
+    }
+    
+  }
+}
+

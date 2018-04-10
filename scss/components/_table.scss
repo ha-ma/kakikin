@@ -1,0 +1,49 @@
+
+
+
+table {
+  width:100%;
+  border: 2px solid $gray;
+  overflow: hidden;
+  word-break: break-all;
+  word-wrap: break-word;
+  th {
+    padding: 6px 8px 5px;
+    border-top: solid 1px $white;
+    width: 30%;
+    overflow: hidden;
+    color: $white;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100%;
+    text-align: left;
+    word-break: break-all;
+    word-wrap: break-word;
+    vertical-align: top;
+    background-color: $primary;
+    @media (max-width: 400px){
+      width:100%;
+      display:block;
+      margin: 0 auto;
+      border:none;
+      border-radius: 3px;
+    }
+  }
+  td{
+    padding: 5px 10px;
+    text-align: left;
+    vertical-align: top;
+    color: $black;
+    background-color: $white;
+    border-top: dotted 1px $gray;
+    overflow: hidden;
+    word-break: break-all;
+    word-wrap: break-word;
+
+    @media (max-width: 400px){
+      display: list-item;
+      width: 100%;
+      border-top: none !important;
+    }
+  }
+}

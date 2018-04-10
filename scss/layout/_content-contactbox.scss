@@ -1,0 +1,67 @@
+
+section.contactbox {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  @media ($tab2) {
+    padding: 50px 0;
+  }
+  .contactbox-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    @media (min-width: 600px) {
+      width: 90%;
+      max-width: 1200px;
+    }
+    @media (min-width: 768px) {
+      @include flex;
+    }
+    .contactbox-left {
+      width: 100%;
+      position: relative;
+      height: 240px;
+
+      @include bgimgcover('../images/contactbox.jpg');
+      @media (min-width: 768px) {
+        width: 50%;
+        height: 240px;
+      }
+
+    }
+    .contactbox-right {
+      width: 80%;
+      position: absolute;
+      background-color: $orangegray;
+      right: 0;
+      left: 0;
+      top: 20px;
+      margin: 0 auto;
+      height: 200px;
+      padding: 20px;
+      opacity: .8;
+      text-align: center;
+      @media (min-width: 768px) {
+        position: relative;
+        width: 50%;
+        height: 240px;
+        padding-top: 20px;
+        top: 0;
+        text-align: left;
+      }
+      h2 {
+        text-align: center;
+        @media ($tab2) {
+          text-align: left;
+        }
+        img {
+          width: 80%;
+          max-width: 200px;
+        }
+      }
+    }
+  }
+}
+
+
+

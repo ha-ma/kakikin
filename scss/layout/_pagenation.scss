@@ -1,0 +1,22 @@
+section.pagenation {
+  width: 100%;
+  margin: 0 auto 30px;
+  text-align: center;
+  ul {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    li {
+      display: inline-block;
+      margin-right: 12px;
+      color: $black;
+      font-size: 18px;
+      a {
+        color: $primary;
+        font-size: 18px;
+        
+      }
+    }
+  }
+}

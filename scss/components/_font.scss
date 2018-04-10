@@ -1,0 +1,25 @@
+
+
+.block-img {
+  display: block;
+}
+
+.heading-box {
+  text-align: center;
+  position: relative;
+
+}
+
+.heading-en {
+  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+  letter-spacing: 8px;
+  font-size: 30px;
+  margin: 0;
+  color: $primary;
+  font-weight: 700;
+}
+
+.heading-jp {
+  margin: 0;
+  letter-spacing: 12px;
+}
